@@ -1,10 +1,15 @@
 # -*- Makefile -*- (tells Emacs what mode to use)
 
+SAIL_RISCV_DIR=../sail-riscv
+
 DIAG=pagecross
 
 
 .PHONY: all
-all: $(DIAG).elf $(DIAG).dis
+all: $(DIAG).sail.out
+
+$(DIAG).sail.out: $(DIAG).elf $(DIAG).dis
+	($(SAIL_RISCV_DIR)/ocaml_emulator/riscv_ocaml_sim_RV64 -enable-misaligned-access pagecross.elf ) > $@ 2>&1
 
 LDSCRIPT = sim.ld
 
