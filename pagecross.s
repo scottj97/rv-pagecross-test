@@ -86,6 +86,8 @@ fail:
         .align 6
         .global tohost
 tohost: .dword 0
+        .global fromhost
+fromhost: .dword 0
         .align 6
         .popsection
 

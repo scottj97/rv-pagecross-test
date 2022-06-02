@@ -3068,7 +3068,7 @@ htif[0x0000000080001000] <- 0x00000001
 htif-syscall-proxy cmd: 0x000000000001
 SUCCESS
 
-Initialization: 0.058603 secs
-Execution: 0.066385 secs
+Initialization: 0.021656 secs
+Execution: 0.032915 secs
 Instructions retired: 170
-Perf: 2560.82 ips
+Perf: 5164.82 ips
